@@ -46,7 +46,7 @@ class AuthController extends GetxController {
     }
   }
 
-  var loginModel = LoginModel(data: Data(user: User())).obs;
+  Rx<LoginModel> loginModel = LoginModel(data: Data(user: User())).obs;
   final DBHelper _dbHelper = DBHelper();
 
   Future<bool> loginCtrl(String email, String password) async {
